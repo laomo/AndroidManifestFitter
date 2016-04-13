@@ -1,14 +1,20 @@
 <idea-plugin version="2">
   <id>be.jorgedc.androidmanifestfitter</id>
   <name>Add Activity to AndroidManifest</name>
-  <version>1.0</version>
+  <version>1.1</version>
   <vendor email="jorgedecorte@gmail.com">JorgeDeCorte</vendor>
 
   <description><![CDATA[
-      This adds the Activity to the AndroidManifest
+      This adds the Activity to the AndroidManifest.<br />
+      Support shortcut : option + a (mac), alt + a (win)
       ]]></description>
 
   <change-notes><![CDATA[
+        <b>1.1</b>
+        <ul>
+            <li>Add shortcut support</li>
+            <li>Add portrait support</li>
+        </ul>
       Version 1.0 of adding the Activity to the AndroidManifest.xml
       ]]>
   </change-notes>
@@ -35,6 +41,7 @@
       <action id="androidmanifestfitter" class="be.jorgedc.androidmanifestfitter.AndroidManifestFitter"
               text="Add to AndroidManifest" description="Adds the Activity to the AndroidManifest">
           <add-to-group group-id="GenerateGroup" anchor="last"/>
+          <keyboard-shortcut keymap="$default" first-keystroke="alt a"/>
       </action>
   </actions>
 

@@ -44,7 +44,8 @@ public class AndroidManifestFitter extends AnAction {
             Document document = FileDocumentManager.getInstance().getCachedDocument(childFile);
             if (document != null && document.isWritable() && childFile.getPresentableName().toLowerCase().equals("androidmanifest.xml")) {
                 String androidManifest = document.getCharsSequence().toString();
-                androidManifest = androidManifest.replace("</application>", "\n <activity android:name=\"" + packageName + "\" /> \n\n </application>");
+                androidManifest = androidManifest.replace("</application>", "\t<activity\n" +
+                        "\t\t\tandroid:name=\"" + packageName + "\" \n\t\t\tandroid:screenOrientation=\"portrait\" /> \n\n\t</application>");
                 Runnable writeAction = new WriteAction(androidManifest, document);
                 ApplicationManager.getApplication().runWriteAction(writeAction);
 
