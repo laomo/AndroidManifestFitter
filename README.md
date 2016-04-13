@@ -13,6 +13,9 @@ When you have an Activity or a class that inherits from Activity at some point t
 * Add shortcut support: option + a (mac), alt + a (win)
 * Add portrait support
 
+#### Install
+Download this plugin from [releases](https://github.com/laomo/AndroidManifestFitter/releases) and install it manually in: Preferences/Settings->Plugins->Install plugin from disk.
+
 #### Todo
 * optimize code
 * more
